@@ -55,9 +55,9 @@ function init() {
                 Yellow_Car.onload = function () {
                     moveRoad();
                 };
-            }
+            };
         };
-    }
+    };
 
 
     function moveRoad() {
@@ -126,7 +126,7 @@ function init() {
         }
 
         area.fillStyle = "black";
-        area.font = "30px Arial";
+        area.font = "30px Times New Roman";
         area.textAlign = "left";
         area.fillText("Score: ", 0, 50);
         area.fillText(score, 10, 80);
@@ -180,12 +180,12 @@ function init() {
             area.fillRect(0, 0, canvas.width, canvas.height);
 
             area.fillStyle = "red";
-            area.font = "60px Arial";
+            area.font = "60px Times New Roman";
             area.textAlign = "center";
             area.fillText("GAME OVER!", canvas.width / 2, canvas.height / 2 - 20);
 
             area.fillStyle = "White";
-            area.font = "20px Arial";
+            area.font = "20px Times New Roman";
             area.fillText("Score " + score, canvas.width / 2, canvas.height / 2 + 30);
 
 
@@ -193,7 +193,7 @@ function init() {
 
 
             if (score > highscore) {
-                area.font = "40px Arial";
+                area.font = "40px Times New Roman";
                 area.fillText("New Record", canvas.width / 2, canvas.height / 2 - 150);
                 highscore = score;
             }
@@ -256,13 +256,14 @@ document.addEventListener("keydown", (event) => {
 
 
 
-area.fillStyle = "rgba(0,0,0,0.9)";
+area.fillStyle = "rgba(30, 59, 153, 0.6)";
 area.fillRect(0, 0, canvas.width, canvas.height);
 
-area.fillStyle = "White";
-area.font = "50px Arial";
+area.fillStyle = "Black";
+area.font = "50px Times New Roman";
 area.textAlign = "center";
-area.fillText("Press T to start the game", canvas.width / 2, canvas.height / 2 - 20);
+area.fillText("New Game", canvas.width / 2, canvas.height / 2 - 20);
+area.fillText("Press T 2 times to start", canvas.width / 2, canvas.height / 2 + 60);
 
 document.addEventListener("keydown", (event) => {
     if (event.key === "T" || event.key === "t") init();
